@@ -27,7 +27,7 @@
       }
     </style>
     <script type="module" data-cfasync="false">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
 
       mermaid.initialize({
         startOnLoad: false,
@@ -36,13 +36,13 @@
       let svgCounter = 0;
 
       window.$docsify = {
-        name: 'Docsify Mermaid 10',
-        repo: 'https://github.com/HugoDF/docsify-mermaid-10',
-        themeColor: '#26a8ed',
+        name: "Docsify Mermaid 10",
+        repo: "https://github.com/HugoDF/docsify-mermaid-10",
+        themeColor: "#26a8ed",
         markdown: {
           renderer: {
             code(code, lang) {
-              if (lang === 'mermaid') {
+              if (lang === "mermaid") {
                 const svgName = `mermaid-svg-${svgCounter++}`;
                 const MERMAID_CONTAINER_ID = `${svgName}-container`;
                 mermaid.render(svgName, code).then(({ svg }) => {

@@ -19,7 +19,7 @@ window.$docsify = {
   markdown: {
     renderer: {
       code(code, lang) {
-        if (lang === 'mermaid') {
+        if (lang === "mermaid") {
           return mermaid.render(`mermaid-svg`, code).then(({ svg }) => svg);
         }
         return this.origin.code.apply(this, arguments);
@@ -63,7 +63,7 @@ window.$docsify = {
   markdown: {
     renderer: {
       code(code, lang) {
-        if (lang === 'mermaid') {
+        if (lang === "mermaid") {
           const svgName = `mermaid-svg-${svgCounter++}`;
           const MERMAID_CONTAINER_ID = `${svgName}-container`;
           mermaid.render(svgName, code).then(({ svg }) => {
